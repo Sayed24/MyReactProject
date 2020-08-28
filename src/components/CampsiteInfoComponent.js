@@ -6,7 +6,7 @@ function RenderCampsite({campsite}) {
         <div className="col-md-5 m-1">
             <Card>
                 <CardImg top src={campsite.image} alt={campsite.name} />
-                <CardBody>
+                <CardBody style={{backgroundColor: "#f4f4f4"}} >
                     <CardTitle>{campsite.name}</CardTitle>
                     <CardText>{campsite.description}</CardText>
                 </CardBody>
@@ -18,11 +18,12 @@ function RenderCampsite({campsite}) {
 function RenderComments({comments}) {
     if (comments) {
         return (
-            <div className="col-md-5 m-1">
+            <div style={{backgroundColor: "#f4f4f4"}} className="col-md-5 m-1">
                 <h4>Comments</h4>
                 {comments.map(comment => {
                     return (
-                        <div key={comment.id}>
+                        <div 
+                             key={comment.id}>
                             <p>{comment.text} <br />
                             -- {comment.author} {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 
                             '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
