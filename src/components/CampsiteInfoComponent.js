@@ -18,7 +18,7 @@ function RenderCampsite({campsite}) {
 function RenderComments({comments}) {
     if (comments) {
         return (
-            <div style={{backgroundColor: "#f4f4f4"}} className="col-md-5 m-1">
+            <div className="col-md-5 m-1">
                 <h4>Comments</h4>
                 {comments.map(comment => {
                     return (
